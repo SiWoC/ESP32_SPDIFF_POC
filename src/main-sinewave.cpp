@@ -12,7 +12,7 @@
 
 #include "board_settings.h"
 
-#include "AudioConfigLocal.h"
+#include "AudioConfigLocal-sinewave.h"
 #include "AudioTools.h"
 
 typedef int16_t sound_t;                                   // sound will be represented as int16_t (with 2 bytes)
@@ -36,7 +36,7 @@ void setup(void) {
   Serial.println("starting SPDIF...of SineWave");
   auto config = out.defaultConfig();
   config.copyFrom(info); 
-  config.pin_data = I2S_DOUT;
+  config.pin_data = SPDIF_DATA_PIN;
   out.begin(config);
 
   // Setup sine wave

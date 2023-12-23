@@ -5,7 +5,11 @@
 
 // SD pins
 #define SD_CS         10
+#define SPI_MOSI      11
+#define SPI_MISO      13
+#define SPI_SCK       12
 
 // Digital out
+#define I2S_BCLK      0
+#define I2S_LRC       18
 #define I2S_DOUT      17
-#define SPDIF_DATA_PIN I2S_DOUT
